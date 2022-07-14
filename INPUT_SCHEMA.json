@@ -3,16 +3,10 @@
     "type": "object",
     "schemaVersion": 1,
     "properties": {
-        "input_urls": {
-            "title": "Input URLs",
-            "type": "array",
-            "description": "URLs to start with",
-            "editor": "requestListSources"
-        },
-        "first_page_only": {
-                    "title": "First Page Only",
+        "scrape_bundles": {
+                    "title": "Scrape Bundles",
                     "type": "boolean",
-                    "description": "Only extract ASINs from first overview page only the stops the actor.",
+                    "description": "Scrape [Games, Books and Software] Bundles",
                     "default": true
         },
        "proxyConfig": {
@@ -23,5 +17,5 @@
             "editor": "proxy"
         }
     },
-    "required": ["input_urls"]
+    "required": ["scrape_bundles"]
 }

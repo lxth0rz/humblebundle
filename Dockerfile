@@ -23,8 +23,6 @@ RUN npm install
 RUN pip install requests
 RUN pip install scrapy
 RUN pip install apify-client
-RUN pip install nltk
-RUN pip install scraperapi-sdk
 
 # Sets path to Chrome executable, this is used by Apify.launchPuppeteer()
 ENV APIFY_CHROME_EXECUTABLE_PATH=/usr/bin/google-chrome
