@@ -68,8 +68,34 @@ class amazon_products_reviews(Spider):
             json_results = json.loads(json_results)
 
             books = json_results['data']['books']['mosaic'][0]['products']
+            for b in books:
+                b.pop('tile_logo_information')
+                b.pop('machine_name')
+                b.pop('disable_hero_tile')
+                b.pop('marketing_blurb')
+                b.pop('hover_title')
+                b.pop('fallback_store_sale_logo')
+                b.pop('highlights')
+
             games = json_results['data']['games']['mosaic'][0]['products']
+            for b in games:
+                b.pop('tile_logo_information')
+                b.pop('machine_name')
+                b.pop('disable_hero_tile')
+                b.pop('marketing_blurb')
+                b.pop('hover_title')
+                b.pop('fallback_store_sale_logo')
+                b.pop('highlights')
+
             software = json_results['data']['software']['mosaic'][0]['products']
+            for b in software:
+                b.pop('tile_logo_information')
+                b.pop('machine_name')
+                b.pop('disable_hero_tile')
+                b.pop('marketing_blurb')
+                b.pop('hover_title')
+                b.pop('fallback_store_sale_logo')
+                b.pop('highlights')
 
             data = {'books': books,
                     'games': games,
